@@ -10,33 +10,33 @@ Developed with **React + TypeScript** on the frontend and **Express + TypeScript
 StylishPack is a full-stack e-commerce platform designed for Kuwait’s bilingual retail market.  
 Customers can browse products, manage their cart, place orders, and complete payments through a secure, session-based checkout flow.  
 Each successful order automatically generates a PDF invoice and sends a confirmation email to the customer.  
-The admin dashboard allows full control over products, orders, and reporting — all through a clean, responsive interface.
+The admin dashboard provides full control over products, orders, and sales reporting — all within a clean, responsive UI.
 
 ---
 
 ## 🧩 Tech Stack
 
-**Frontend:**  
+**Frontend**
 - React 19 (TypeScript)  
 - Vite (bundling & build)  
 - Tailwind CSS  
 - React Router, React Hook Form, Zustand, TanStack Query  
 
-**Backend:**  
+**Backend**
 - Node.js + Express (TypeScript)  
 - MongoDB + Mongoose  
 - Puppeteer (PDF invoice generation)  
 - Multer (uploads)  
 - Resend (email provider)  
 
-**Authentication & Security:**  
+**Authentication & Security**
 - JWT (HTTP-only cookies)  
 - bcrypt password hashing  
 - Helmet (CSP + HSTS)  
 - CSRF protection (`csurf`)  
 - express-rate-limit for login & register routes  
 
-**Integrations:**  
+**Integrations**
 - Google Maps picker (`@react-google-maps/api`)  
 - KNET payment gateway setup (fully implemented, awaiting merchant activation)
 
@@ -70,8 +70,8 @@ invoices/ → Generated PDF invoices (served under /uploads/invoices)
 - `/api/payment` – finalize order and trigger invoice generation  
 - `/api/admin/*` – secured endpoints for admin management  
 
-All inputs are validated through `express-validator`, and responses are sanitized before delivery.  
-Admin and customer sessions are managed through signed JWTs stored in HttpOnly cookies.
+All inputs are validated with **express-validator**, and responses are sanitized before delivery.  
+Admin and customer sessions are managed through signed **JWTs** stored in **HttpOnly cookies**.
 
 ---
 
@@ -79,7 +79,7 @@ Admin and customer sessions are managed through signed JWTs stored in HttpOnly c
 
 - Environment variables isolated in `.env` (Mongo URI, JWT secret, session secret, etc.)  
 - CSRF protection active in production  
-- HTTPS enforced behind Nginx reverse proxy  
+- HTTPS enforced behind **Nginx** reverse proxy  
 - Helmet configured for CSP and HSTS headers  
 - PDF and static assets served with secure caching headers  
 
@@ -90,7 +90,7 @@ Admin and customer sessions are managed through signed JWTs stored in HttpOnly c
 **Live Demo:** [www.stylishpkshop.com](https://www.stylishpkshop.com)  
 **Developer:** Hassan Jahandideh  
 Full-Stack Developer (React / Node.js / TypeScript)  
-📧 [jahandideh.2083@gmail.com]  
+📧 jahandideh.2083@gmail.com  
 🔗 [LinkedIn](https://linkedin.com/in/hassanjahandideh)
 
 ---
@@ -98,4 +98,3 @@ Full-Stack Developer (React / Node.js / TypeScript)
 **Note:**  
 This repository contains documentation only.  
 The full production source code is private for security reasons, as it includes live payment integration and client data.
-
